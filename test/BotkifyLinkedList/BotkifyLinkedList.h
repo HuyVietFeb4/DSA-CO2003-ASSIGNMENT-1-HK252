@@ -170,6 +170,7 @@ public:
             if(traverseLL->next != nullptr) {
                 oss << ",";
             }
+            traverseLL = traverseLL->next;
         }
         return oss.str();
     }
