@@ -150,7 +150,7 @@ public:
     }
 
     T& get(int index) const {
-        if (index >= count || index < 0) {
+        if (index >= this->count || index < 0) {
             throw out_of_range("Index is invalid!");
         }
 
@@ -158,6 +158,7 @@ public:
         Node* traverseLL = this->head;
         while(returnIndex < index) {
             traverseLL = traverseLL->next;
+            returnIndex++;
         }
         return traverseLL->data;
     }
